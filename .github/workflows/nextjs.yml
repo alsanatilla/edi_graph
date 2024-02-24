@@ -76,7 +76,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          DISCORD_CLIENT_ID: ${{ vars.DISCORD_CLIENT_ID }}
+          DISCORD_CLIENT_ID: ${{ env.DISCORD_CLIENT_ID }}
           DISCORD_CLIENT_SECRET: ${{ vars.DISCORD_CLIENT_SECRET }}
           UPLOADTHING_SECRET: ${{ vars.UPLOADTHING_SECRET }}
           UPLOADTHING_APP_ID: ${{ vars.UPLOADTHING_APP_ID }}
